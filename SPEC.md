@@ -6,10 +6,10 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 ## Current stage
 
-- Stage: Direction B, approved logo, and versatility tips implemented; learner review and final validation pending.
+- Stage: BRAND-001 kept; first branded storefront and live style guide merged into `main`.
 - Current feature: `BRAND-001` — first branded storefront and live style guide.
-- Status: Implemented and checked; learner record review and keep/merge decision pending. `npm.cmd run check` completed with exit code 0 outside the restricted environment: formatting, lint, 7 server tests, and 10 browser tests passed.
-- Next small decision: Restore SSH access to push the feature branch and open its PR. Learner reviewed the learning-record summary as accurate. Keyboard focus was clear; nothing was reported cramped/cut off in the narrow view. Final keep/merge decision pending.
+- Status: Learner approved keeping and merging. [PR #2](https://github.com/chaseac-cpu/is117-brand-studio-cc/pull/2) verified merged in `origin/main`, commit `d07f5c5`, containing feature commit `cefb62a`. `npm.cmd run check` completed with exit code 0 outside the restricted environment: formatting, lint, 7 server tests, and 10 browser tests passed.
+- Next step: Submit the repository URL in Canvas. SPEC.md and reviewed LEARNING.md are included. Publishing is optional and is not completed; no follow-up feature is selected.
 
 ## Product boundary
 

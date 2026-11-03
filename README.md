@@ -1,10 +1,10 @@
 # IS117 Brand Studio
 
-**Deep White draft:** the local storefront and live style guide now use the approved diver/DW logo, direction B's layered frame, and three occasion-based styling tips. Prepared checks passed; the learner reported a more professional layout and typography, visible keyboard focus, and no narrow-view issue. The learner reviewed the record summary for accuracy; the keep/merge decision remains pending. Nothing has been deployed from this chat; see [SPEC.md](SPEC.md) for current decisions and evidence.
+**Deep White — BRAND-001 kept:** the storefront and live style guide use the approved diver/DW logo, direction B's layered frame, and three occasion-based styling tips. Prepared checks passed, the learner reviewed the learning-record summary, and [BRAND-001 pull request #2](https://github.com/chaseac-cpu/is117-brand-studio-cc/pull/2) is merged into `main` (verified merge commit `d07f5c5`). See [SPEC.md](SPEC.md) and the reviewed [LEARNING.md](LEARNING.md). GitHub Pages has not been published; no live deployment is claimed.
 
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
-This template starts with a working, deliberately neutral storefront. Your audience, name, promise, logo, voice, and visual direction are **not chosen yet**. You make the decisions; the agent helps you explore, build, check, and revise them.
+This repository began with a neutral teaching storefront. It now contains Deep White's agreed identity and the exploration and review evidence linked above. The remaining sections preserve the course setup and workflow reference.
 
 **A short record, visible to you:** your AI coach updates [LEARNING.md](LEARNING.md) with brief task-related explanations, observations and help received. It is AI-drafted, not a full transcript, and may be public with your repository. Review it and correct or remove excerpts before they are committed or pushed. Your instructor uses it alongside the project with this [simple three-part rubric](docs/assessment.md); the AI does not assign your grade.
 

@@ -2,7 +2,7 @@
 
 AI-drafted task evidence, not a transcript or grade. This file may be public: review, correct or remove excerpts before commit/push. Use short actual quotes or labeled paraphrases and disclose help. Approval alone is not an explanation; leave missing evidence pending.
 
-- **Feature:** BRAND-001 — pending
+- **Feature:** BRAND-001 — kept; [PR #2](https://github.com/chaseac-cpu/is117-brand-studio-cc/pull/2) verified merged into `origin/main` at `d07f5c5`.
 - **Date:** 2026-10-29 through 2026-11-02
 - **Conversation context available:** This chat, from npm troubleshooting through brand choices, implementation, and learner browser observations.
 - **Review status:** Learner reviewed the compact summary of choices, benefit, browser observations, and AI test explanation and replied "this is accurate". Approved for inclusion with this feature; later changed excerpts require another review.
@@ -53,4 +53,4 @@ Validation follow-up: `npm.cmd run check` completed with exit code 0 outside the
 
 Repository follow-up: public HTTPS fetch verified that the learner's template copy has identical starter files but an independent initial commit (`38f9970`). The feature commit was rebased onto that initial commit, so it has the learner's repository ancestry. SSH fetch failed with `Permission denied (publickey)`; push and PR creation remain pending. The learner's record summary was reviewed before committing its excerpts.
 
-**Next step:** Restore SSH access, push the feature branch, and open/review the PR. Learner test interpretation remains AI-assisted rather than independently evidenced. Final keep/merge and publishing decisions remain pending.
+**Next step:** Submit the repository URL in Canvas. SSH access was restored with the replacement key; PR #2 is verified merged. Existing reviewed learner excerpts are unchanged. Learner test interpretation remains AI-assisted rather than independently evidenced. Publishing remains optional and incomplete.
