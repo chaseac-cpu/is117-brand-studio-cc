@@ -1,5 +1,7 @@
 # IS117 Brand Studio
 
+**Deep White draft:** the local storefront and live style guide now use the approved diver/DW logo, direction B's layered frame, and three occasion-based styling tips. Prepared checks passed; the learner reported a more professional layout and typography, visible keyboard focus, and no narrow-view issue. The learner reviewed the record summary for accuracy; the keep/merge decision remains pending. Nothing has been deployed from this chat; see [SPEC.md](SPEC.md) for current decisions and evidence.
+
 **The same white T-shirt can carry very different meanings.** Develop a brand for it with an AI collaborator, then make those decisions visible in a professional website and a live style guide.
 
 This template starts with a working, deliberately neutral storefront. Your audience, name, promise, logo, voice, and visual direction are **not chosen yet**. You make the decisions; the agent helps you explore, build, check, and revise them.

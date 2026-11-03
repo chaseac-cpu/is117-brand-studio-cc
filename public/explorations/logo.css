@@ -1,0 +1,107 @@
+.logo-review {
+  max-width: 1100px;
+  margin: auto;
+  padding: 45px 28px;
+}
+
+.logo-review h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(38px, 5vw, 64px);
+}
+
+.logo-intro {
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  margin: 36px 0;
+}
+
+.logo-grid section {
+  border: 1px solid #9ba6a3;
+  padding: 26px;
+}
+
+.logo-grid h2 {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+
+.logo-large {
+  background: #fff;
+}
+
+.logo-large > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.logo-name {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.2em;
+  font-size: 28px;
+  text-align: center;
+  margin: 16px 0 40px;
+  color: #000;
+}
+
+.logo-small {
+  background: #fff;
+  margin-bottom: 22px;
+}
+
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #000;
+}
+
+.logo-lockup img {
+  flex-shrink: 0;
+}
+
+.logo-lockup span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.logo-small p,
+.logo-paper p,
+.logo-note {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.logo-paper {
+  background: #e9e1cf;
+  color: #000;
+}
+
+.logo-note {
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+@media (width <= 700px) {
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-review {
+    padding: 30px 20px;
+  }
+
+  .logo-grid section {
+    padding: 20px;
+  }
+}
