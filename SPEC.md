@@ -6,10 +6,10 @@ This is the durable agreement between the learner and agent. Keep it concise and
 
 ## Current stage
 
-- Stage: Baseline ready to try; brand decisions pending.
+- Stage: Direction B, approved logo, and versatility tips implemented; learner review and final validation pending.
 - Current feature: `BRAND-001` — first branded storefront and live style guide.
-- Status: Pending learner scope agreement.
-- Next small decision: Confirm the first slice after trying the neutral storefront.
+- Status: Implemented and checked; learner record review and keep/merge decision pending. `npm.cmd run check` completed with exit code 0 outside the restricted environment: formatting, lint, 7 server tests, and 10 browser tests passed.
+- Next small decision: Restore SSH access to push the feature branch and open its PR. Learner reviewed the learning-record summary as accurate. Keyboard focus was clear; nothing was reported cramped/cut off in the narrow view. Final keep/merge decision pending.
 
 ## Product boundary
 
@@ -17,26 +17,30 @@ The product is the same white T-shirt throughout the comparison. The baseline of
 
 ## Audience hypotheses
 
+Primary audience: hobby divers who value understated style and quality, with intended wear before, during, and after diving. Secondary audience: people seeking versatility for everyday wear and casual dinners. Learner requested merging these markets and approved the compact audience summary. Learner prefers a plain white shirt without a printed design. Audience needs remain hypotheses, not customer research.
+
+Waterproofing and a collar that returns to shape are proposed, untested features only; the learner approved this framing. Do not present these as established product facts or imply protective dive-gear performance. The prototype still uses the same white T-shirt.
+
 The primary need guides the page. Give the secondary card one contrasting need to check that same page; keep both cards brief.
 
-| Tiny card                             | Primary audience          | Secondary audience        |
-| ------------------------------------- | ------------------------- | ------------------------- |
-| Person in a concrete situation        | Not chosen yet            | Not chosen yet            |
-| Goal or meaning they seek             | Not chosen yet            | Not chosen yet            |
-| Concern before choosing               | Not chosen yet            | Not chosen yet            |
-| What the page should help them decide | Not chosen yet            | Not chosen yet            |
-| Evidence or assumption                | Assumption; not validated | Assumption; not validated |
+| Tiny card                             | Primary audience                                                               | Secondary audience                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| Person in a concrete situation        | Hobby diver before, during, or after diving                                    | Person choosing a tee for everyday wear or a casual dinner                   |
+| Goal or meaning they seek             | Confidence; a sharp, classy appearance                                         | Versatility across casual occasions                                          |
+| Concern before choosing               | Not chosen yet                                                                 | Not chosen yet                                                               |
+| What the page should help them decide | Whether the plain tee fits their refined, adventurous identity (AI hypothesis) | Whether one plain tee suits everyday wear and casual dinners (AI hypothesis) |
+| Evidence or assumption                | Assumption; not validated                                                      | Assumption; not validated                                                    |
 
 ## Early brand brief
 
-| Decision                                 | Agreement      |
-| ---------------------------------------- | -------------- |
-| Brand name                               | Not chosen yet |
-| One-sentence promise                     | Not chosen yet |
-| Primary archetype: the brand's character | Not chosen yet |
-| Three voice traits                       | Not chosen yet |
-| One example line in this voice           | Not chosen yet |
-| Learner's predicted audience effect      | Not chosen yet |
+| Decision                                 | Agreement                                                                                                                                                 |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Brand name                               | Deep White — learner wants the name to emphasize how white the shirts are; no comparative whiteness claim verified.                                       |
+| One-sentence promise                     | Deep White — Understated style, above and below the surface. Learner approved; identity language, not evidence of underwater performance.                 |
+| Primary archetype: the brand's character | Ruler leads with refinement and high standards; Explorer supports with adventure and discovery. Learner requested the hybrid and approved this hierarchy. |
+| Three voice traits                       | Confident, refined, adventurous (AI proposal approved by learner).                                                                                        |
+| One example line in this voice           | "Your day changes. Your style stays." in the approved occasion-based styling section; wording drafted by AI.                                              |
+| Learner's predicted audience effect      | "Feeling confident and comfortable on top of sharp and classy". Intended impression; physical comfort is not verified.                                    |
 
 ## Visual decision
 
@@ -44,25 +48,27 @@ Compare two small hero previews before building the whole page. Hold the product
 
 A simple original SVG wordmark is enough. Show small-size and one-color presentations; they may use the same asset when it works.
 
-| Item                                              | Agreement or evidence |
-| ------------------------------------------------- | --------------------- |
-| Shared headline / support / action                | Not chosen yet        |
-| Modernist preview, reference, and annotations     | Not chosen yet        |
-| Postmodernist preview, reference, and annotations | Not chosen yet        |
-| Chosen direction and reason                       | Not chosen yet        |
-| Original SVG logo                                 | Not chosen yet        |
-| Monochrome and small-size variants                | Not chosen yet        |
-| Logo review at actual use size                    | Not checked yet       |
-| Shared palette, typography, spacing, and assets   | Not chosen yet        |
+| Item                                              | Agreement or evidence                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Shared headline / support / action                | Approved promise used as headline; identical proposed support and action in both previews, pending learner review.                                                                                                                                                                                                         |
+| Modernist preview, reference, and annotations     | [Measured depth](public/explorations/modernist.html); Müller-Brockmann, Beethoven (1955); [render review](docs/explorations/README.md).                                                                                                                                                                                    |
+| Postmodernist preview, reference, and annotations | [Surface tension](public/explorations/postmodernist.html); Weingart, Schreibkunst (1981); [render review](docs/explorations/README.md).                                                                                                                                                                                    |
+| Chosen direction and reason                       | B / Surface tension. Learner chose the layered frame as the visible detail giving the desired sharp, classy feeling, after an AI follow-up offering lettering/frame examples.                                                                                                                                              |
+| Original SVG logo                                 | Learner approved revision 02 of the [black scuba diver over DW](public/explorations/deep-white-diver.svg): "yes that version is a lot better".                                                                                                                                                                             |
+| Monochrome and small-size variants                | [Review page](public/explorations/logo.html): same black, transparent SVG at large size, 96 × 60 px navigation size with full name, and one-color on warm paper.                                                                                                                                                           |
+| Logo review at actual use size                    | Agent inspected 1100px and 390px renders, including 96 × 60 px navigation size. Revision 02 uses slimmer serif initials, less overlap, and a lighter diver. Fine mask/hose details diminish. Lint and loading/overflow checks passed. Learner approved revision 02.                                                        |
+| Shared palette, typography, spacing, and assets   | `public/styles.css`: warm paper #f5f3ed, deep ink #122e35, sea-glass #dce5e1; Georgia italic display, Arial body, monospace labels, shared spacing/components. `assets/wordmark.svg` is approved logo revision 02. All three pages inspected at 1440px and 390px; computed logo/font/ink/primary-action comparisons match. |
 
 ## Ethical persuasion
 
+Learner chose the exploration-message proposal over the free-tip proposal, but explained its intended benefit as versatility: "making customers feel like what they wear can be put on in any situation". AI reframed this as everyday wear, casual dinner, and before/after a dive; learner approved that section. This does not establish a community/unity mechanism. Present occasions as styling suggestions, not proof of suitability for every situation or underwater performance. Proposed line "Your day changes. Your style stays." awaits specific copy review. The two concrete persuasion applications remain to be agreed.
+
 Choose two applications that help the visitor make a voluntary, informed decision. Record their real implementation and mechanism rather than a principle name alone. Required size selection or validation alone does not establish consistency. Do not invent social proof, scarcity, authority, or product facts.
 
-| Principle      | Actual copy or interaction | Visitor benefit / factual support |
-| -------------- | -------------------------- | --------------------------------- |
-| Not chosen yet | Not chosen yet             | Not chosen yet                    |
-| Not chosen yet | Not chosen yet             | Not chosen yet                    |
+| Principle                            | Actual copy or interaction                                                             | Visitor benefit / factual support                                                                                                                                                                                  |
+| ------------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Reciprocity                          | Three free outfit tips in `#styling`, available without sign-up or purchase.           | Practical suggestions help visitors picture everyday wear, casual dinner, and before/after a dive. Learner approved adding tips; claims remain suggestions.                                                        |
+| Liking (AI mechanism interpretation) | Familiar occasion labels and welcoming "Take what suits you" copy in the same section. | Relatable settings support the learner's stated versatility benefit. These contexts and the section were approved; effect on liking is a design hypothesis, not measured evidence or a learner theory explanation. |
 
 ## BRAND-001 — first branded storefront and live style guide
 
@@ -82,9 +88,9 @@ Keep when:
 
 Write a short result and link only evidence that exists. A passing browser check is evidence for its assertions, not customer research or proof of full accessibility.
 
-| Spec ID   | Files           | Issue / PR      | Actual checks and observations            |
-| --------- | --------------- | --------------- | ----------------------------------------- |
-| BRAND-001 | Not changed yet | Not created yet | Not run yet; learner observations pending |
+| Spec ID   | Files                                                                                                                                    | Issue / PR                                                                                                                              | Actual checks and observations                                                                                                                                              |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BRAND-001 | SPEC.md; LEARNING.md (local draft); [hero explorations](public/explorations/index.html); Windows-compatible lint quoting in package.json | [Issue #1](https://github.com/chaseac-cpu/is117-brand-studio-cc/issues/1) supplied by learner; branch `brand-001-storefront`; no PR yet | Learner reported selected size goes into demo bag. [Hero render checks](docs/explorations/README.md) passed at 1440px and 390px; full check result recorded in LEARNING.md. |
 
 ## Later
 

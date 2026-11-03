@@ -3,22 +3,54 @@
 AI-drafted task evidence, not a transcript or grade. This file may be public: review, correct or remove excerpts before commit/push. Use short actual quotes or labeled paraphrases and disclose help. Approval alone is not an explanation; leave missing evidence pending.
 
 - **Feature:** BRAND-001 — pending
-- **Date:** Pending
-- **Conversation context available:** Not recorded yet
-- **Review status:** Not reviewed; no learner evidence recorded
+- **Date:** 2026-10-29 through 2026-11-02
+- **Conversation context available:** This chat, from npm troubleshooting through brand choices, implementation, and learner browser observations.
+- **Review status:** Learner reviewed the compact summary of choices, benefit, browser observations, and AI test explanation and replied "this is accurate". Approved for inclusion with this feature; later changed excerpts require another review.
 
 ## Student contributions
 
-| Checkpoint                                   | Actual student words or labeled paraphrase | Assistance supplied | Evidence or gap |
-| -------------------------------------------- | ------------------------------------------ | ------------------- | --------------- |
-| Choice and reason                            | Pending                                    | Pending             | Pending         |
-| Prediction or visitor benefit                | Pending                                    | Pending             | Pending         |
-| Interpretation of one actual test            | Pending                                    | Pending             | Pending         |
-| Browser observation and keep/revise decision | Pending                                    | Pending             | Pending         |
+| Checkpoint                                   | Actual student words or labeled paraphrase                                                                                                                                            | Assistance supplied                                                                                                                                                                               | Evidence or gap                                                                                                                    |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Choice and reason                            | Paraphrase: chose hobby deep-sea divers; wants a plain white shirt emphasizing quality, waterproofing, and a collar that returns to shape. Approved the storefront/style-guide scope. | AI asked about wearing situations and suggested community/exploration examples; learner instead emphasized product qualities. AI proposed labeling performance features untested; learner agreed. | Audience and preferences chosen; audience-specific reason not yet evidenced. Proposed features are not verified facts.             |
+| Prediction or visitor benefit                | "Feeling confident and comfortable on top of sharp and classy"; later "Either or its the versatilility" about everyday wear or casual dinners.                                        | AI asked the predicted feeling after the character choice and supplied everyday wear/casual dinner examples when asking about the broader audience.                                               | Learner supplied an intended emotional effect and versatility benefit; physical comfort and product performance remain unverified. |
+| Interpretation of one actual test            | "i dont know" when asked what defect the missing-size check catches.                                                                                                                  | AI then explained that the check catches adding a shirt without a size, verifies a size message appears, and keeps the bag empty.                                                                 | Explanation supplied by AI; learner interpretation not yet evidenced.                                                              |
+| Browser observation and keep/revise decision | Baseline: "The size of the shirt goes into the cart/demo bag". Branded page: "it looks a lot more professional"; identified "the layout and typography".                              | AI prompted baseline interaction, then a first impression and a visible detail; typography was among the follow-up examples.                                                                      | Learner-reported impression with a visible detail after prompting. Keyboard/mobile observations and final keep decision pending.   |
 
 ## AI work and evidence links
 
-- **Work performed by AI:** Pending
-- **SPEC, issue/PR, actual checks and artifacts:** Pending
+- **Work performed by AI:** Located nested folder, corrected origin, created feature branch, drafted records, installed locked dependencies and Chromium, researched and inspected two design references, and built isolated hero previews. Fixed Windows lint quoting; normalized formatting (existing files have no substantive formatting diff). Hero render assertions passed at desktop and narrow widths; all four screenshots inspected. Storefront branding is still pending a direction choice.
+- **SPEC, issue/PR, actual checks and artifacts:** [SPEC.md](SPEC.md); learner supplied [issue #1](https://github.com/chaseac-cpu/is117-brand-studio-cc/issues/1); local branch `brand-001-storefront`. Remote history comparison pending before push.
 
-**Next step:** Pending
+Later name decision: AI suggested **Deep White**; learner adopted it and explained, "Deep white isnt a thing but we can market as how white our t shirts are". This supplies a product-appearance reason after an AI suggestion; the connection to hobby divers remains unexplained. No comparative whiteness performance is established.
+
+Later audience and promise decision: learner requested "more broad for people that like class and quality", then "merge the markets". AI proposed hobby divers who value understated style and quality, with broader appeal beyond diving, and the promise "Deep White — Understated style, above and below the surface." Learner replied "Yes perfect". This is approval of an AI proposal, not an audience-effect explanation. Underwater features remain proposed and untested.
+
+Character and voice: learner requested "Ruler and Explorer hybrid" after AI offered those two characters. Learner approved the AI proposal that Ruler leads with refinement and high standards, Explorer supports with adventure, and the voice is confident, refined, adventurous. Approval establishes the choice, not an explanation of audience effect.
+
+Audience checkpoint: learner approved the combined audience summary and the page's role in helping visitors decide whether the shirt fits their style. This is approval of the proposed cards, not customer validation.
+
+Hero artifacts and render checks: [comparison notes and four screenshots](docs/explorations/README.md); live files under [public/explorations](public/explorations/index.html). Direction choice and visual reason pending.
+
+Checks: formatting, lint and all 7 server tests passed. After Chromium installation, all 10 prepared browser cases reported passes, but the runner remained active during shutdown and was interrupted; `npm run check` has no verified successful exit. Separate hero render checks completed successfully at both widths. Test shutdown remains to investigate before final handoff.
+
+Visual choice: learner said "B does" when asked which direction gives customers a sharp, classy feeling. After AI prompted with italic lettering and layered frame as examples, learner identified "layered frame". This is an assisted identification of a visible detail connected to the intended impression; it does not establish customer validation.
+
+Logo proposal, 2026-10-30: learner requested a creative all-black scuba-diver silhouette with DW behind it. AI drew an original path-based SVG with transparent separation and prepared [large, 96 × 60 px navigation, and one-color presentations](public/explorations/logo.html). Agent inspected [desktop](docs/explorations/logo-1100.png) and [narrow](docs/explorations/logo-390.png) renders; image loading and horizontal-overflow assertions passed. `npm run lint` passed. Fine hose/mask details diminish at navigation size; full name accompanies the mark. Learner approval pending; no trademark clearance claimed.
+
+Logo revision, 2026-11-02: learner described proposal 01 as "good start just bad execution" and approved the AI diagnosis of excessive overlap and blocky shapes. AI revised the same SVG with slender custom serif initials, a lighter swimming silhouette, and less overlap. Proposal 02 remains pending learner approval. Lint passed; desktop and narrow image-loading/overflow assertions passed, and agent inspected both updated renders. This later feedback does not erase the first proposal or imply approval of the revision.
+
+Later logo approval: learner said "yes that version is a lot better"; revision 02 is approved. This is design approval, not an additional explanation.
+
+Page-element benefit: after AI offered a styling tip or exploration message, learner chose the second. Asked how it helps, learner said "making customers feel like what they wear can be put on in any situation". AI reframed this as versatility rather than community membership and proposed everyday wear, casual dinner, and before/after a dive; learner approved. The explanation followed a community example but supplied a different benefit. No universal-use or underwater-performance claim is established; persuasion mechanisms remain undecided.
+
+Styling-tip approval: learner approved adding practical outfit suggestions to the three-setting section. AI implemented the section, direction B, and approved logo across storefront and style guide; the studio overview shares the updated header and tokens. AI interprets the free tips as reciprocity and familiar, welcoming settings as liking. These mechanism labels are AI interpretation, not a learner explanation or a proven conversion effect.
+
+Implementation checks: formatting and lint passed; all 7 server tests and 10 browser cases reported passes on the branded pages. Again the full runner stayed active in shutdown and was interrupted, so no clean `npm run check` exit is claimed. Separate render review exited successfully: all three pages at 1440px and 390px had loaded images, no horizontal overflow, and matching logo/headline font/ink/button color. Agent inspected all six screenshots in `docs/explorations/*-branded-*.png`. Human brand, keyboard, and mobile observations remain pending. Issue update and remote-history comparison remain pending before publishing work.
+
+Later browser checks: learner answered "yes" when asked whether the selected link/control is clearly visible while tabbing. On the narrow-view question, learner first answered "yes" to whether anything looked cramped/cut off; asked which part, learner clarified "nothing". Record the clarification as no issue reported, not an observed defect. These are brief learner reports, not comprehensive accessibility review.
+
+Validation follow-up: `npm.cmd run check` completed with exit code 0 outside the restricted execution environment: formatting, lint, all 7 server tests, and all 10 Chromium cases passed (browser suite: 10.2s). Earlier restricted runs had passing cases but stalled during shutdown. This successful run resolves the full-check blocker without changing the prepared tests or weakening rules.
+
+Repository follow-up: public HTTPS fetch verified that the learner's template copy has identical starter files but an independent initial commit (`38f9970`). The feature commit was rebased onto that initial commit, so it has the learner's repository ancestry. SSH fetch failed with `Permission denied (publickey)`; push and PR creation remain pending. The learner's record summary was reviewed before committing its excerpts.
+
+**Next step:** Restore SSH access, push the feature branch, and open/review the PR. Learner test interpretation remains AI-assisted rather than independently evidenced. Final keep/merge and publishing decisions remain pending.

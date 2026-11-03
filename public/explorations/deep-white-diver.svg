@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-labelledby="title desc">
+  <title id="title">Deep White: scuba diver over DW</title>
+  <desc id="desc">A streamlined black scuba diver swims just across the top of slender custom serif DW initials. Open space separates the fins, tank, arms, and lettering.</desc>
+  <defs>
+    <g id="diver" transform="rotate(-12 205 85)">
+      <path d="M190 57C190 53 194 50 199 50H230C235 50 238 53 238 57C238 61 235 64 230 64H199C194 64 190 61 190 57Z" />
+      <path d="M235 54H242V59H235Z" />
+      <path d="M177 83C186 74 196 69 209 68C224 67 236 70 247 75L257 72L260 80L249 87C237 88 227 85 215 88L192 96L178 95Z" />
+      <path d="M254 64C254 57 259 52 266 52C273 52 278 57 278 64C278 71 273 77 266 77C259 77 254 71 254 64Z" />
+      <path d="M274 56L285 58L283 66L275 68Z" />
+      <path d="M240 57C254 44 281 44 282 68" fill="none" stroke-width="3" stroke-linecap="round" />
+      <path d="M238 75C250 69 258 64 270 60L299 52L305 54L302 59L275 67L249 84Z" />
+      <path d="M230 82L251 99L270 93L273 96L270 101L249 107C246 108 243 106 241 104L221 89Z" />
+      <path d="M185 84L153 90L132 76L126 83L150 101C153 103 156 103 160 102L191 96Z" />
+      <path d="M183 89L157 113L132 115L132 124L161 123C164 123 166 121 169 119L196 98Z" />
+      <path d="M135 75L128 86L101 75L90 60C102 61 115 67 135 75Z" />
+      <path d="M135 113L135 125L102 131L87 125C100 119 115 115 135 113Z" />
+    </g>
+    <mask id="separation" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="250">
+      <rect width="400" height="250" fill="white" />
+      <use href="#diver" fill="black" stroke="black" stroke-width="7" stroke-linejoin="round" />
+    </mask>
+  </defs>
+  <g fill="#000" mask="url(#separation)">
+    <path fill-rule="evenodd" d="M41 107H91C131 107 153 128 153 164C153 200 131 222 91 222H41V218L55 215V114L41 111ZM69 114V215H90C120 215 137 198 137 164C137 131 120 114 90 114Z" />
+    <path d="M166 107H207V111L193 115L217 197L242 123L238 114L227 111V107H267V111L254 115L281 197L305 115L291 111V107H327V111L315 115L282 224H276L247 139L219 224H213L179 115L166 111Z" />
+  </g>
+  <use href="#diver" fill="#000" stroke="#000" />
+</svg>
