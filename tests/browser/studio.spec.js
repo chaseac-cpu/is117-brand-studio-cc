@@ -50,6 +50,10 @@ test("keyboard: the skip link reaches main and the size controls work without a 
   await page.keyboard.press("ArrowRight");
   await expect(page.locator('input[name="size"][value="M"]')).toBeChecked();
   await page.keyboard.press("Tab");
+  await expect(page.getByText("Fit guide", { exact: true })).toBeFocused();
+  await page.keyboard.press("Tab");
+  await expect(page.getByLabel("Quantity", { exact: true })).toBeFocused();
+  await page.keyboard.press("Tab");
   await expect(
     page.getByRole("button", { name: "Add to demo bag", exact: true }),
   ).toBeFocused();
@@ -117,3 +121,45 @@ for (const route of ["/", "/styleguide.html", "/studio.html"]) {
     await expect(page.getByRole("main")).toBeVisible();
   });
 }
+
+test("completed demo orders survive reload and are shared by both checkout versions", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("radio", { name: "M", exact: true }).check();
+  await page.getByLabel("Quantity", { exact: true }).fill("0");
+  await page.getByRole("button", { name: "Add to demo bag" }).click();
+  await expect(page.getByText("Enter a whole quantity")).toBeVisible();
+  await expect(page.locator("#bag-count")).toHaveText("0");
+
+  await page.getByLabel("Quantity", { exact: true }).fill("2");
+  await page.getByRole("button", { name: "Add to demo bag" }).click();
+  await page.getByRole("button", { name: "Review demo order" }).click();
+  await expect(page.locator("#review-total")).toHaveText("Demo total $56.00");
+  await page.getByRole("button", { name: "Finish simulated checkout" }).click();
+
+  const history = page.locator("#history-items");
+  await expect(history.getByRole("listitem")).toHaveCount(1);
+  const receipt = await history.innerText();
+  expect(receipt).toMatch(
+    /^DW-[A-F0-9]{16} · White T-shirt · Size M · Quantity 2 · \$56\.00$/,
+  );
+  console.log(`Build record receipt: ${receipt}`);
+
+  await page.reload();
+  await page.getByText("Open demo order history", { exact: true }).click();
+  await expect(history).toHaveText(receipt);
+
+  await page.getByRole("link", { name: /Version B/ }).click();
+  await page.getByText("Open demo order history", { exact: true }).click();
+  await expect(history).toHaveText(receipt);
+  await page.getByRole("radio", { name: "M", exact: true }).check();
+  await page.getByLabel("Quantity", { exact: true }).fill("2");
+  await page
+    .locator("#product-form")
+    .getByRole("button", { name: "Review demo order" })
+    .click();
+  await expect(page.locator("#review-total")).toHaveText("Demo total $56.00");
+  await page.getByRole("button", { name: "Finish simulated checkout" }).click();
+  await expect(history.getByRole("listitem")).toHaveCount(2);
+});

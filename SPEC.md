@@ -95,3 +95,14 @@ Write a short result and link only evidence that exists. A passing browser check
 ## Later
 
 No follow-up is selected. After keeping `BRAND-001`, choose one next cycle: perhaps a brand story, a supported fit guide, or richer demo-bag behavior. Agree its scope and add one new spec ID at that time.
+
+## Build record — simulated checkout
+
+The existing Deep White identity, hero direction, logo, audience, and fictional $28 price carry forward into this follow-up to BRAND-001. See the [reviewed learning record](LEARNING.md) and [brand feature PR](https://github.com/chaseac-cpu/is117-brand-studio-cc/pull/2).
+
+- **Compare:** [Version A](http://127.0.0.1:5175/) lets shoppers build and review a bag with multiple sizes. [Version B](http://127.0.0.1:5175/index.html?version=b) goes directly from one size and quantity to review. These are local preview links.
+- **Choose a shirt:** A shopper can find fit guidance and select a size and whole quantity. Missing size or invalid quantity leaves the bag unchanged and shows feedback.
+- **Review and finish:** A shopper can see what they chose and its total before completing a simulated order. Two medium shirts should cost $56.00 in both versions.
+- **Find a completed order:** A shopper can reopen the same reference, size, quantity, and total after reload and in the other version on the same browser and site. The browser stores only demo order metadata. The fit guide and help section explain the fictional product and fulfillment boundaries.
+- **Build evidence:** Local Chromium saved reference `DW-FF501100CFA16410` for size M, quantity 2, $56.00. The same receipt appeared after reloading A and opening B. B also completed the same task. These observations came from an automated browser run. Lint, seven server tests, and all 11 Chromium tests passed.
+- **Improve:** The checkout selection, outside peer feedback, and published verification are pending.

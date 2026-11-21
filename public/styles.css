@@ -1450,3 +1450,33 @@ legend {
     padding-block: 2.5rem;
   }
 }
+
+.prototype-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  padding-block: 1rem;
+}
+
+.prototype-nav [aria-current="page"] {
+  font-weight: 700;
+}
+
+#quantity {
+  max-inline-size: 6rem;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+.fit-guide summary,
+#history-panel summary {
+  cursor: pointer;
+}
+
+#order-review {
+  margin-block: 1rem;
+}
+
+#shop-help dd {
+  margin: 0 0 1rem;
+}
