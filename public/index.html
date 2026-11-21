@@ -10,7 +10,7 @@
     <title>Deep White — Understated style</title>
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
-    <script src="shop.js" defer></script>
+    <script type="module" src="shop.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -47,6 +47,15 @@
     </header>
 
     <main id="main">
+      <nav class="wrap prototype-nav" aria-label="Checkout prototype versions">
+        <a id="version-a" href="index.html" aria-current="page"
+          >Version A · Bag review</a
+        >
+        <a id="version-b" href="index.html?version=b"
+          >Version B · Direct review</a
+        >
+        <a href="#order-history">Demo order history</a>
+      </nav>
       <section class="product-section wrap" aria-labelledby="product-title">
         <div class="product-visual">
           <div class="visual-label">
@@ -81,14 +90,17 @@
             From everyday plans to casual dinners, make it your own.
           </p>
           <div class="price-row">
-            <p class="price">$28 <span>USD</span></p>
+            <p class="price">
+              <strong id="unit-price">$28</strong> <span>USD</span>
+            </p>
             <span class="micro-label">Fictional demo price</span>
           </div>
           <form id="product-form" class="product-form" novalidate>
             <fieldset aria-describedby="size-help size-error">
               <legend>Choose a size</legend>
               <p id="size-help" class="field-help">
-                Demo sizes: S, M, L, and XL.
+                Demo sizes run from S to XL. Start with the size you usually
+                wear in a tee.
               </p>
               <div class="size-options">
                 <label class="size-option"
@@ -116,6 +128,29 @@
                 Choose a size before adding the shirt to your demo bag.
               </p>
             </fieldset>
+            <details class="fit-guide">
+              <summary>Fit guide</summary>
+              <p>
+                For a closer or roomier look, compare the cut of a tee you
+                already own. Actual garment measurements and fit are still to be
+                verified for this concept.
+              </p>
+            </details>
+            <label for="quantity">Quantity</label>
+            <input
+              id="quantity"
+              name="quantity"
+              type="number"
+              min="1"
+              max="10"
+              step="1"
+              value="1"
+              required
+              aria-describedby="quantity-error"
+            />
+            <p id="quantity-error" class="field-error" role="alert" hidden>
+              Enter a whole quantity from 1 through 10.
+            </p>
             <button class="button button-primary add-button" type="submit">
               Add to demo bag <span aria-hidden="true">↗</span>
             </button>
@@ -167,10 +202,53 @@
           <button id="clear-bag" class="text-button" type="button" disabled>
             Empty demo bag
           </button>
+          <button
+            id="review-order"
+            class="button button-primary"
+            type="button"
+            disabled
+          >
+            Review demo order
+          </button>
+          <section id="order-review" aria-labelledby="review-title" hidden>
+            <h3 id="review-title" tabindex="-1">Review your demo order</h3>
+            <ul id="review-items" class="bag-items"></ul>
+            <p id="review-total"></p>
+            <p>
+              Sample order details are provided. No payment, email, or shipping.
+            </p>
+            <button
+              id="finish-order"
+              class="button button-primary"
+              type="button"
+            >
+              Finish simulated checkout
+            </button>
+          </section>
           <p class="field-help">
-            The bag resets when this page reloads. There is no checkout.
+            The bag resets on reload. Completed demo orders stay in this
+            browser.
           </p>
         </div>
+      </section>
+
+      <section
+        id="order-history"
+        class="bag-section wrap"
+        aria-labelledby="history-title"
+      >
+        <div>
+          <h2 id="history-title">Demo order history</h2>
+        </div>
+        <details id="history-panel" class="bag-details">
+          <summary>Open demo order history</summary>
+          <p class="field-help">
+            Both versions share completed demo orders in this browser. Clearing
+            site data removes them.
+          </p>
+          <p id="history-status">No saved demo orders yet.</p>
+          <ul id="history-items" class="bag-items"></ul>
+        </details>
       </section>
 
       <section
@@ -215,6 +293,27 @@
           Styling suggestions, not tested fit, comfort, or performance claims.
           Waterproofing and collar recovery remain proposed features.
         </p>
+      </section>
+      <section
+        id="shop-help"
+        class="bag-section wrap"
+        aria-labelledby="help-title"
+      >
+        <h2 id="help-title">Delivery, returns, and contact</h2>
+        <dl class="bag-details">
+          <dt>Delivery</dt>
+          <dd>Demo only. No shipments are created.</dd>
+          <dt>Returns</dt>
+          <dd>There are no real purchases to return in this prototype.</dd>
+          <dt>Contact</dt>
+          <dd>
+            For feedback on the prototype, use the
+            <a
+              href="https://github.com/chaseac-cpu/is117-brand-studio-cc/issues"
+              >project issue tracker</a
+            >. Do not share personal or order details there.
+          </dd>
+        </dl>
       </section>
     </main>
 
